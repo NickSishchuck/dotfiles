@@ -87,7 +87,7 @@ clear
 log_header "Dotfiles Installation"
 
 START_TIME=$(date +%s)
-TOTAL_STEPS=8
+TOTAL_STEPS=7
 CURRENT_STEP=0
 
 if ! is_installed "paru"; then

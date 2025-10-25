@@ -76,7 +76,7 @@ pacman-contrib
 power-profiles-daemon
 
 # Fonts, themes & icons
-ttf-cascadia-mono-nerd
+ttf-jetbrains-mono-nerd
 noto-fonts
 noto-fonts-emoji
 otf-font-awesome
