@@ -30,6 +30,5 @@ restart-app swayosd-server
 hyprctl reload
 pkill -SIGUSR2 btop
 makoctl reload
-killall -SIGUSR2 ghostty
 theme-set-vscode
 theme-set-gnome

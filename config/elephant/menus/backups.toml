@@ -6,9 +6,9 @@ icon = ""
 [[entries]]
 icon = ""
 text = "Archive files"
-actions = { "backup-files" = "ghostty --class=local.floating -e backup-files" }
+actions = { "backup-files" = "alacritty --class local.floating -e backup-files" }
 
 [[entries]]
 icon = ""
 text = "Unpack archive"
-actions = { "backup-restore" = "ghostty --class=local.floating -e backup-restore" }
+actions = { "backup-restore" = "alacritty --class local.floating -e backup-restore" }

@@ -3,28 +3,19 @@ gnome-keyring
 polkit-gnome
 
 # Browser
-helium-browser-bin
-zen-browser-bin
+firefox
 
 # Development
 git
 lazygit
 neovim
-visual-studio-code-bin
 
 # Terminal & Shell
-ghostty
-zsh
-starship
-eza
-bat
+alacritty
 btop
 fastfetch
-fd
 fzf
-ripgrep
-zoxide
-pv
+grep
 bc
 
 # Hyprland Ecosystem
@@ -76,6 +67,7 @@ nautilus
 nautilus-open-any-terminal
 rsync
 gvfs-dnssd
+zip
 unzip
 
 # System Utilities
@@ -93,7 +85,7 @@ bibata-cursor-theme
 gnome-themes-extra
 
 # Applications
-localsend-bin
+vlc
 mpv
 
 # Elephant Suite

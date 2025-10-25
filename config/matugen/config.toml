@@ -4,9 +4,9 @@
 input_path = "~/.config/matugen/templates/btop.theme.tmpl"
 output_path = '~/.local/share/dotfiles/themes/matugen/btop.theme'
 
-[templates.ghostty]
-input_path = '~/.config/matugen/templates/ghostty.conf'
-output_path = '~/.local/share/dotfiles/themes/matugen/ghostty.conf'
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.local/share/dotfiles/themes/matugen/alacritty.toml'
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland.conf'

@@ -11,7 +11,7 @@ actions = { "ollama" = "walker --theme menus -m menus:ollama --width 295 --minhe
 [[entries]]
 icon = ""
 text = "Download video"
-actions = { "download-video" = "ghostty --class=local.floating -e media-download" }
+actions = { "download-video" = "alacritty --class local.floating -e media-download" }
 
 [[entries]]
 icon = ""
@@ -21,7 +21,7 @@ actions = { "transcode" = "walker --theme menus -m menus:transcode --width 295 -
 [[entries]]
 icon = ""
 text = "ISO to usb"
-actions = { "write-iso" = "ghostty --class=local.floating -e write-iso" }
+actions = { "write-iso" = "alacritty --class local.floating -e write-iso" }
 
 [[entries]]
 icon = ""
@@ -31,4 +31,4 @@ actions = { "backups" = "walker --theme menus -m menus:backups --width 295 --min
 [[entries]]
 icon = ""
 text = "Add a webapp"
-actions = { "webapp-install" = "ghostty --class=local.floating -e webapp-install" }
+actions = { "webapp-install" = "alacritty --class local.floating -e webapp-install" }

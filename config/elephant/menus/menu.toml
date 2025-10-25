@@ -6,22 +6,22 @@ icon = ""
 [[entries]]
 icon = ""
 text = "Update"
-actions = { "update" = "ghostty --class=local.floating -e update-perform" }
+actions = { "update" = "alacritty --class local.floating -e update-perform" }
 
 [[entries]]
 icon = "󰣇"
 text = "Install package"
-actions = { "pkg-install" = "ghostty --class=local.floating -e pkg-install" }
+actions = { "pkg-install" = "alacritty --class local.floating -e pkg-install" }
 
 [[entries]]
 icon = ""
 text = "Install AUR package"
-actions = { "pkg-install-aur" = "ghostty --class=local.floating -e pkg-install-aur" }
+actions = { "pkg-install-aur" = "alacritty --class local.floating -e pkg-install-aur" }
 
 [[entries]]
 icon = ""
 text = "Remove package"
-actions = { "pkg-remove" = "ghostty --class=local.floating -e pkg-remove" }
+actions = { "pkg-remove" = "alacritty --class local.floating -e pkg-remove" }
 
 [[entries]]
 icon = "󰸌"

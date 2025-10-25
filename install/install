@@ -100,9 +100,11 @@ CURRENT_STEP=$((CURRENT_STEP + 1))
 log_step "[$CURRENT_STEP/$TOTAL_STEPS] Installing packages"
 _installPackages "$SCRIPT_DIR/pkgs.txt"
 
-CURRENT_STEP=$((CURRENT_STEP + 1))
-log_step "[$CURRENT_STEP/$TOTAL_STEPS] Installing zsh plugins"
-bash "$SCRIPT_DIR/setup-zsh"
+if [ -f "$DOTFILES_DIR/default/.bashrc" ]; then
+  backup_file "$HOME/.bashrc" 2>/dev/null || true
+  cp "$DOTFILES_DIR/default/.bashrc" "$HOME/.bashrc"
+  log_success "Bash configuration installed"
+fi
 
 CURRENT_STEP=$((CURRENT_STEP + 1))
 log_step "[$CURRENT_STEP/$TOTAL_STEPS] Setting up LazyVim"

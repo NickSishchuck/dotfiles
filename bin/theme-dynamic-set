@@ -180,7 +180,7 @@ main() {
     process_template "$TEMPLATES_DIR/waybar.css" "$OUTPUT_DIR/waybar.css"
     process_template "$TEMPLATES_DIR/hyprland.conf" "$OUTPUT_DIR/hyprland.conf"
     process_template "$TEMPLATES_DIR/mako.ini" "$OUTPUT_DIR/mako.ini"
-    process_template "$TEMPLATES_DIR/ghostty.conf" "$OUTPUT_DIR/ghostty.conf"
+    process_template "$TEMPLATES_DIR/alacritty.conf" "$OUTPUT_DIR/alacritty.conf"
     process_template "$TEMPLATES_DIR/btop.theme" "$OUTPUT_DIR/btop.theme"
     process_template "$TEMPLATES_DIR/swayosd.css" "$OUTPUT_DIR/swayosd.css"
     process_template "$TEMPLATES_DIR/walker.css" "$OUTPUT_DIR/walker.css"
@@ -237,7 +237,7 @@ main() {
     hyprctl reload
     pkill -SIGUSR2 btop
     makoctl reload
-    killall -SIGUSR2 ghostty
+    killall -SIGUSR2 alacritty
     theme-set-vscode
     theme-set-gnome
 

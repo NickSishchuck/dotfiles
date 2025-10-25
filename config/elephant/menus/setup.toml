@@ -11,9 +11,9 @@ actions = { "postgres" = "walker --theme menus -m menus:postgres --width 295 --m
 [[entries]]
 icon = ""
 text = "Docker"
-actions = { "docker" =  "ghostty --class=local.floating -e docker-setup" }
+actions = { "docker" =  "alacritty --class local.floating -e docker-setup" }
 
 [[entries]]
 icon = ""
 text = "Node.js"
-actions = { "nodejs" = "ghostty --class=local.floating -e nodejs-setup" }
+actions = { "nodejs" = "alacritty --class local.floating -e nodejs-setup" }
