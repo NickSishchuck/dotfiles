@@ -18,6 +18,7 @@ fzf
 tldr
 grep
 bc
+eza
 starship
 
 # Hyprland Ecosystem
