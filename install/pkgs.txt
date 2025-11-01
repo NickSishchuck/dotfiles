@@ -15,8 +15,10 @@ alacritty
 btop
 fastfetch
 fzf
+tldr
 grep
 bc
+starship
 
 # Hyprland Ecosystem
 hyprland
