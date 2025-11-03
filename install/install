@@ -50,36 +50,35 @@ _installParu() {
 }
 
 _installPackages() {
-  local total=$(grep -v '^#' "$1" | grep -v '^$' | wc -l)
-  local current=0
+  local packages=()
+  local batch_size=15
   local failed_packages=()
 
   while IFS= read -r pkg || [ -n "$pkg" ]; do
     [[ -z "$pkg" || "$pkg" =~ ^# ]] && continue
 
-    current=$((current + 1))
-
     if is_installed "${pkg}"; then
-      log_progress "$pkg (already installed)" "$current/$total"
       continue
     fi
 
-    # Try to install, handle conflicts gracefully
-    if spinner "Installing $pkg... [$current/$total]" paru --noconfirm --needed -S "${pkg}" 2>&1; then
-      log_success "$pkg"
-    else
-      log_error "Failed to install: $pkg"
-      failed_packages+=("$pkg")
+    packages+=("${pkg}")
+
+    # Install when batch is full
+    if [ ${#packages[@]} -ge $batch_size ]; then
+      if ! spinner "Installing batch (${#packages[@]} packages)..." \
+        paru --noconfirm --needed -S "${packages[@]}" 2>&1; then
+        # Retry failed batch one-by-one to identify culprit
+        for pkg in "${packages[@]}"; do
+          paru --noconfirm --needed -S "${pkg}" &>/dev/null || failed_packages+=("$pkg")
+        done
+      fi
+      packages=()
     fi
   done <"$1"
 
-  # Report failed packages at the end
-  if [ ${#failed_packages[@]} -gt 0 ]; then
-    log_error "The following packages failed to install:"
-    for pkg in "${failed_packages[@]}"; do
-      log_detail "$pkg"
-    done
-    log_info "You can try installing them manually with: paru -S <package_name>"
+  # Install remaining packages
+  if [ ${#packages[@]} -gt 0 ]; then
+    paru --noconfirm --needed -S "${packages[@]}" 2>&1 || true
   fi
 }
 
