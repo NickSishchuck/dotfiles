@@ -58,9 +58,9 @@
     "on-click": "walker --theme menus -m menus:system --width 150 --minheight 1 --maxheight 600"
   },
 
-  // Clock
+    // Clock
   "clock": {
-    "format": "{:%A %H:%M}",
+    "format": "{:%A | %H:%M | %d.%m}",
     "format-alt": "{:%d %B %Y}",
     "tooltip": false
   },
