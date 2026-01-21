@@ -65,7 +65,8 @@ bluetui
 openssh
 ufw
 
-# File Management
+# File Management  
+thunar
 nautilus
 nautilus-open-any-terminal
 rsync
