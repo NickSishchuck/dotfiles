@@ -135,10 +135,9 @@
     "format": "",
     "on-click": "ddc-brightness-popup"
   },
-
-  "custom/filemanager": {
-    "format": "",
-    "on-click": "nautilus",
-    "tooltip-format": "Open Filemanager"
-  }
+"custom/filemanager": {
+    "format": "",
+    "on-click": "mission-center",
+    "tooltip-format": "Open Mission Center"
+}
 }
